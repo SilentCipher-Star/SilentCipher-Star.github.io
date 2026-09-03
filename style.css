@@ -327,3 +327,13 @@ body {
         0 0 35px rgba(147, 51, 234, 0.6), 
         0 0 50px rgba(126, 34, 206, 0.4);
 }
+
+.upcoming-card {
+    border-style: dashed;
+    border-color: var(--purple-accent);
+    background-color: rgba(168, 85, 247, 0.03);
+}
+
+.upcoming-card:hover {
+    border-style: solid;
+}

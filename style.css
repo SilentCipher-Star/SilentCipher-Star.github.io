@@ -432,3 +432,42 @@ body {
 .card-footer-links a:hover {
     opacity: 0.8;
 }
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.hobby-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-card:hover {
+    border-color: var(--purple-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.15);
+}
+
+.hobby-icon {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.hobby-card h3 {
+    color: #ffffff;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.hobby-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}

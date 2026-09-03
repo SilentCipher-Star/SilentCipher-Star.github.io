@@ -1,118 +1,236 @@
-/* Reset and Base Styles */
+:root {
+    --bg-main: #0d1117;
+    --text-primary: #c9d1d9;
+    --text-muted: #8b949e;
+    --border-color: #30363d;
+    --card-bg: #161b22;
+    --purple-accent: #8a2be2;
+    --purple-dark: #581c87;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 body {
-    background-color: #0f0b15; 
-    color: #e2e8f0; 
+    background-color: var(--bg-main);
+    color: var(--text-primary);
     line-height: 1.6;
 }
 
-/* Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 5%;
-    border-bottom: 1px solid #2e2042;
-    background-color: #0f0b15;
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
 }
 
-.logo {
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #c084fc; 
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 1rem 0 1.5rem 0;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #94a3b8;
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
-}
-
-.nav-links li a:hover {
-    color: #c084fc;
-}
-
-/* Hero Section */
-.hero-section {
-    display: flex;
-    align-items: center;
-    min-height: 80vh;
-    padding: 0 15%; 
-}
-
-.hero-content {
-    max-width: 800px;
-}
-
-.small-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #9b51e0; 
-    margin-bottom: 1rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
+/* Hero */
 .main-title {
-    font-size: 4.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
     color: #ffffff;
-    line-height: 1.1;
-    margin-bottom: 1rem;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #c084fc;
+.hero-center {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.hero-center h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.code-text {
+    font-family: monospace;
+    color: var(--purple-accent);
+    font-size: 1.1rem;
     margin-bottom: 2rem;
 }
 
-.description {
-    font-size: 1.05rem;
-    color: #94a3b8;
-    margin-bottom: 1.5rem;
-    max-width: 700px;
+.hero-banner {
+    height: 100px;
+    background: linear-gradient(90deg, #4c1d95 0%, #7e22ce 100%);
+    border-radius: 6px;
+    opacity: 0.8;
 }
 
-.tagline {
-    font-size: 1rem;
-    color: #9b51e0;
+/* Lists */
+h2 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-list {
+    list-style: none;
     margin-bottom: 2.5rem;
 }
 
-/* Square Outlined Buttons */
-.button-group {
-    display: flex;
-    gap: 1rem;
+.feature-list li {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border: 1px solid #9b51e0; 
-    background-color: transparent;
-    color: #e2e8f0;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: all 0.2s ease;
-}
-
-.btn:hover {
-    background-color: #9b51e0;
+.feature-list strong {
     color: #ffffff;
+}
+
+/* Skills */
+.skills-section {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.section-badge {
+    font-family: monospace;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.category-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.badge-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.tech-badge {
+    background-color: var(--purple-dark);
+    color: #ffffff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.tool-badge {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Projects Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.repo-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    text-decoration: none;
+    transition: border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.repo-card:hover {
+    border-color: var(--text-muted);
+}
+
+.repo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.repo-header h3 {
+    color: #58a6ff;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.public-badge {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    padding: 0.1rem 0.4rem;
+    border-radius: 2rem;
+}
+
+.repo-card p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.repo-stats {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lang-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cpp-dot { background-color: #f34b7d; }
+.python-dot { background-color: #3572A5; }
+
+/* Connect & Footer */
+.social-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.contact-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.git-badge { background-color: #24292e; }
+.email-badge { background-color: #6e40c9; }
+
+.footer-quote {
+    text-align: center;
+    margin-top: 4rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
 }

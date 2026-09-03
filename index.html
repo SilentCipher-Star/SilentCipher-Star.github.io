@@ -5,61 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anika | CSE @ IUT 🌸</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <h1>Anika</h1>
-            <p class="subtitle">Computer Science & Engineering Student @ IUT 🌸</p>
-            <p class="tagline">Code | Cats | Chaos 🐾</p>
-            <div class="social-links">
-                <a href="mailto:lookism6122@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://github.com/SilentCipher-Star" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/anika-tahsin-bba859333/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">ANIKA</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero / Landing Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <p class="small-title">ANIKA</p>
+            
+            <h1 class="main-title">Anika</h1>
+            
+            <h2 class="subtitle">Computer Science & Engineering Student @ IUT 🌸</h2>
+            
+            <p class="description">
+                I am a CSE student interested in low-level programming, database management, and system architecture. My core skills include <strong>C++</strong>, <strong>Python</strong>, and <strong>Object-Oriented Programming (OOP)</strong>.
+            </p>
+            
+            <p class="tagline"><strong>Code | Cats | Chaos 🐾</strong></p>
+            
+            <div class="button-group">
+                <a href="https://github.com/SilentCipher-Star" target="_blank" class="btn">GitHub</a>
+                <a href="https://www.linkedin.com/in/anika-tahsin-bba859333/" target="_blank" class="btn">LinkedIn</a>
+                <a href="mailto:lookism6122@gmail.com" class="btn">Email</a>
             </div>
         </div>
-    </header>
-
-    <main class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <hr>
-            <p>I am a CSE student interested in low-level programming, database management, and system architecture. My core skills include <strong>C++</strong>, <strong>Python</strong>, and <strong>Object-Oriented Programming (OOP)</strong>.</p>
-        </section>
-
-        <section id="research">
-            <h2>Research & Academia</h2>
-            <hr>
-            <div class="card">
-                <h3>NPU vs. RISC-V CPU Architectures</h3>
-                <p class="role">Comparative Study & Design Presentation</p>
-                <p>An in-depth analysis comparing Neural Processing Unit (NPU) throughput and hardware design trade-offs against open-source RISC-V CPU architectures for specialized workloads.</p>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <hr>
-            <div class="grid">
-                <div class="card">
-                    <h3>DBMS Candidate Key Finder</h3>
-                    <p>Algorithms for identifying candidate keys, primary keys, and functional dependencies within relational database schemas.</p>
-                    <span class="badge">Python</span> <span class="badge">DBMS</span>
-                </div>
-                <div class="card">
-                    <h3>Academic Research & Peer-Review Portal</h3>
-                    <p>A structured platform handling paper submissions, reviewer assignments, and automated review workflows.</p>
-                    <span class="badge">C++</span> <span class="badge">OOP</span> <span class="badge">SQL</span>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Anika Built with HTML & CSS on GitHub Pages.</p>
-    </footer>
+    </section>
 
 </body>
 </html>

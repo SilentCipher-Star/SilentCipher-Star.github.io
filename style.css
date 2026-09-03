@@ -90,19 +90,44 @@ body {
 
 /* Hero Section */
 .hero {
+    position: relative; 
     min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0 1.5rem;
+    overflow: hidden;
+}
+
+.hero-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(107, 33, 168, 0.15) 0%, rgba(13, 17, 23, 0) 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
 .main-title {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 800;
     color: #ffffff;
     margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 20px rgba(168, 85, 247, 0.4); /* Neon text glow */
+}
+
+/* Turns the flat subtitle into a sleek silver/purple gradient */
+.gradient-text {
+    font-size: 1.25rem;
+    background: linear-gradient(90deg, #c084fc, #a855f7, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 3rem;
+    font-weight: 500;
 }
 
 .subtitle {
@@ -115,6 +140,23 @@ body {
     display: block;
     margin: 1.5rem auto;
     max-width: 100%;
+}
+
+/* Adds a drop shadow and a smooth hovering animation to the banner */
+.floating-banner {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px -10px rgba(107, 33, 168, 0.6);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
 }
 
 .banner-svg {

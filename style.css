@@ -337,3 +337,106 @@ body {
 .upcoming-card:hover {
     border-style: solid;
 }
+/* Modern Card Grid Layout */
+.repo-card-new {
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.repo-card-new:hover {
+    border-color: var(--purple-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.15);
+}
+
+.card-top-badges {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.category-badge {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.status-badge {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.status-badge.completed {
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.status-badge.upcoming {
+    color: var(--purple-accent);
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.repo-card-new h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.repo-card-new p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.tag-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.tag-pills span {
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+}
+
+.card-footer-links {
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.8rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-footer-links a {
+    font-size: 0.85rem;
+    color: var(--purple-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.card-footer-links a:hover {
+    opacity: 0.8;
+}

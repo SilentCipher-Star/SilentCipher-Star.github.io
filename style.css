@@ -478,9 +478,73 @@ body {
 }
 
 .hero-cat-gif {
-    width: 320px;
+    width: 300px;
     max-width: 100%;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(168, 85, 247, 0.2);
 }
+/* Skills Section */
+        /* Enhanced Skills Section */
+        
+        /* 1. Illuminated Subtitle */
+        .skills-subtitle {
+            color: #d4d4d8; 
+            font-style: italic;
+            font-size: 1.05rem;
+            margin-top: 0;
+            margin-bottom: 3.5rem;
+            /* Adds a subtle glowing highlight bar next to the text */
+            border-left: 3px solid var(--purple-accent);
+            padding: 0.5rem 1rem;
+            background: linear-gradient(90deg, rgba(157, 78, 221, 0.1) 0%, transparent 100%);
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* 2. Neon Category Headers */
+        .skill-category h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #c084fc; /* Brighter purple */
+            margin-bottom: 1.2rem;
+            text-shadow: 0 0 10px rgba(192, 132, 252, 0.4); /* Glowing text effect */
+            font-weight: 700;
+        }
+
+        .skill-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* 3. Ambient Glowing Pills */
+        .skill-pills span {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(192, 132, 252, 0.4); /* Brighter, visible border */
+            color: #f4f4f5;
+            font-size: 0.95rem;
+            
+            /* Switching to a hacker/tech font for the skills */
+            font-family: 'Fira Code', 'Courier New', Courier, monospace; 
+            font-weight: 600;
+            
+            /* Ambient lighting: base glow and inset glow */
+            background: rgba(157, 78, 221, 0.08);
+            box-shadow: 0 0 12px rgba(157, 78, 221, 0.15), inset 0 0 8px rgba(157, 78, 221, 0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            cursor: default;
+        }
+
+        /* 4. High-Intensity Hover State */
+        .skill-pills span:hover {
+            border-color: #c084fc; 
+            background: rgba(157, 78, 221, 0.2);
+            /* Massive double-glow effect on hover */
+            box-shadow: 0 0 20px rgba(192, 132, 252, 0.6), inset 0 0 15px rgba(192, 132, 252, 0.2);
+            transform: translateY(-4px) scale(1.05); /* Lifts and slightly enlarges */
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Makes the text itself glow */
+        }
